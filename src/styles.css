@@ -1,5 +1,8 @@
 body{
-    background-image: url(assets/imgs/background-4k.png);
+    background-image: url(assets/imgs/background-4k-dark.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

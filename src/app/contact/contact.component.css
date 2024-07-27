@@ -1,0 +1,20 @@
+.contacts-form{
+    width: 50%;
+    background-color: #fff5eed1;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.first-tab{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.second-tab{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
