@@ -1,4 +1,9 @@
-import { NgModule } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  NgModule,
+} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,11 +16,19 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
 import { QuickComponent } from './contact/quick/quick.component';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
 import { AdvancedComponent } from './contact/advanced/advanced.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { AboutUsModalComponent } from './modals/about-us-modal/about-us-modal.component';
 @NgModule({
-  declarations: [AppComponent, ContactComponent, QuickComponent, AdvancedComponent],
+  declarations: [
+    AppComponent,
+    ContactComponent,
+    QuickComponent,
+    AdvancedComponent,
+    AboutUsModalComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,8 +38,10 @@ import { AdvancedComponent } from './contact/advanced/advanced.component';
     MatInputModule,
     MatIconModule,
     MatTabsModule,
-    MatButtonModule, 
-    MatDividerModule, 
+    MatButtonModule,
+    MatDividerModule,
+    MatButtonModule,
+    MatDialogModule,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
