@@ -1,4 +1,10 @@
-.spacer{
-    height: 70px;
-    width: 2px;
+.spacer {
+  height: 70px;
+  width: 2px;
+}
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
