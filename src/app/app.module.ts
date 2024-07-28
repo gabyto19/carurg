@@ -21,6 +21,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { AdvancedComponent } from './contact/advanced/advanced.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { AboutUsModalComponent } from './modals/about-us-modal/about-us-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +39,8 @@ import { AboutUsModalComponent } from './modals/about-us-modal/about-us-modal.co
     AboutUsModalComponent,
   ],
   imports: [
+    BrowserAnimationsModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     MatSlideToggleModule,
@@ -40,8 +51,8 @@ import { AboutUsModalComponent } from './modals/about-us-modal/about-us-modal.co
     MatTabsModule,
     MatButtonModule,
     MatDividerModule,
-    MatButtonModule,
     MatDialogModule,
+    ReactiveFormsModule, // Add this line
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],

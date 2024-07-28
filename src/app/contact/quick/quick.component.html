@@ -1,4 +1,4 @@
-  <br>
+<!-- <br>
   <h2>Enter your phone number to contact you</h2>
   <div class="spacer"></div>
   <mat-form-field class="only-number">
@@ -6,4 +6,10 @@
     <input type="tel" matInput placeholder="555-555-1234" />
   </mat-form-field>
   <br>
-  <button mat-raised-button>Contact me</button>
+  <button mat-raised-button>Contact me</button> -->
+<form [formGroup]="phoneNumberForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput placeholder="Phone Number" formControlName="phoneNumber" />
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
