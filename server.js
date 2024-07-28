@@ -21,7 +21,7 @@ app.post("/api/send-email", (req, res) => {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: "carurgpost1@gmail.com",
-    subject: "New Phone Number Submission",
+    subject: "New Phone Number Submission - Quick",
     text: `Phone Number: ${phoneNumber}`,
   };
 

@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class QuickComponent {
   phoneNumberForm: FormGroup;
+  successMessage: string = '';
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.phoneNumberForm = this.fb.group({
@@ -20,8 +21,10 @@ export class QuickComponent {
     if (this.phoneNumberForm.valid) {
       this.http.post('/api/send-email', this.phoneNumberForm.value).subscribe(response => {
         console.log('Response:', response);
+        this.successMessage = 'Your number has been sent';
       }, error => {
         console.error('Error sending email', error);
+        this.successMessage = "Your Number can't be send";  // Clear the message if there was an error
       });
     }
   }

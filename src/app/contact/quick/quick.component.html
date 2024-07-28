@@ -11,6 +11,18 @@
       formControlName="phoneNumber"
     />
   </mat-form-field>
+  <p
+    *ngIf="successMessage"
+    [ngClass]="{
+      'text-success': successMessage,
+      'text-danger': !successMessage
+    }"
+    class="SendClass"
+  >
+    {{ successMessage }}
+    
+  </p>
+
   <br />
   <button mat-raised-button type="submit">Contact me</button>
 </form>

@@ -8,3 +8,8 @@ form {
   flex-direction: column;
   align-items: center;
 }
+.SendClass{
+    position: absolute;
+    margin-top: 20px;
+
+}
