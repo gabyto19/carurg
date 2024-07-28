@@ -19,7 +19,7 @@ export class QuickComponent {
   onSubmit() {
     if (this.phoneNumberForm.valid) {
       this.http.post('/api/send-email', this.phoneNumberForm.value).subscribe(response => {
-        console.log('Email sent successfully');
+        console.log('Response:', response);
       }, error => {
         console.error('Error sending email', error);
       });
