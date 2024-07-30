@@ -1,27 +1,33 @@
-<div class="car-details d-flex w-75 justify-content-between">
+<div class="car-details d-flex w-75 justify-content-between" [formGroup]="carForm">
   <mat-form-field>
     <mat-label>Brand</mat-label>
-    <input matInput />
+    <input matInput formControlName="brand" />
   </mat-form-field>
   <mat-form-field>
     <mat-label>Model</mat-label>
-    <input matInput />
+    <input matInput formControlName="model" />
   </mat-form-field>
   <mat-form-field>
     <mat-label>Year</mat-label>
-    <input matInput />
+    <input matInput formControlName="year" />
   </mat-form-field>
 </div>
-<div class="additional-details w-75 ">
+<div class="additional-details w-75" [formGroup]="carForm">
   <mat-form-field class="w-100">
     <mat-label>Details about car | What do you need?</mat-label>
-    <textarea style="resize: none;" matInput placeholder="Ex. It makes me feel..."></textarea>
+    <textarea
+      style="resize: none"
+      matInput
+      formControlName="details"
+      placeholder="Ex. It makes me feel..."
+    ></textarea>
   </mat-form-field>
 </div>
-<div class="accept w-75">
+<div class="accept w-75" [formGroup]="carForm">
   <mat-form-field class="only-number">
     <mat-label>Telephone</mat-label>
-    <input type="tel" matInput placeholder="512-345-567" />
+    <input type="tel" matInput formControlName="telephone" placeholder="512-345-567" />
   </mat-form-field>
-  <button mat-raised-button>Contact me</button>
+  <button mat-raised-button (click)="onSubmit()">Contact me</button>
 </div>
+<p *ngIf="successMessage">{{ successMessage }}</p>
