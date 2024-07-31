@@ -3,3 +3,7 @@
     justify-content: space-around;
     align-items: center;
 }
+.SendClass{
+    position: absolute;
+    bottom: 8px;
+}

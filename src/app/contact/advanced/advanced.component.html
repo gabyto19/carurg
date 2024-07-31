@@ -30,4 +30,14 @@
   </mat-form-field>
   <button mat-raised-button (click)="onSubmit()">Contact me</button>
 </div>
-<p *ngIf="successMessage">{{ successMessage }}</p>
+<p
+    *ngIf="successMessage"
+    [ngClass]="{
+      'text-success': successMessage,
+      'text-danger': !successMessage
+    }"
+    class="SendClass"
+  >
+    {{ successMessage }}
+    
+  </p>

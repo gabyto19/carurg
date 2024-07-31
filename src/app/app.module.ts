@@ -24,6 +24,7 @@ import { AboutUsModalComponent } from './modals/about-us-modal/about-us-modal.co
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FindUsComponent } from './contact/find-us/find-us.component';
 
 
 
@@ -37,6 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     QuickComponent,
     AdvancedComponent,
     AboutUsModalComponent,
+    FindUsComponent,
   ],
   imports: [
     BrowserAnimationsModule,
